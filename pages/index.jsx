@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ThemeSwitcher, SideBar, Hero, About, Works, Contact } from '../components'
+import { ThemeSwitcher, SideBar, Hero, About, Works, Contact, Button } from '../components'
 
 export default function Home() {
   return (
