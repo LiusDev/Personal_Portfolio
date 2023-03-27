@@ -14,11 +14,7 @@ const MetaMessenger = () => {
                     var chatbox = document.getElementById('fb-customer-chat');
                     chatbox.setAttribute("page_id", "100761282981593");
                     chatbox.setAttribute("attribution", "biz_inbox");
-                `}
-            </Script>
 
-            <Script>
-                { `
                     window.fbAsyncInit = function() {
                         FB.init({
                         xfbml            : true,

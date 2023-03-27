@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ThemeSwitcher, SideBar, Hero, About, Works, Contact, Button } from '../components'
+import { ThemeSwitcher, SideBar, Hero, About, Works, Contact, MetaMessenger } from '../components'
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
         <Works />
         <Contact />
       </main>
+      <MetaMessenger />
     </>
   )
 }
