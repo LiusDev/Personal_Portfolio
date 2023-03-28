@@ -1,7 +1,19 @@
 import Head from 'next/head'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { ThemeSwitcher, SideBar, Hero, About, Works, Contact, MetaMessenger } from '../components'
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, [])
   return (
     <>
       <Head>

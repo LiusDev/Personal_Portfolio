@@ -3,14 +3,25 @@ import Image from 'next/image'
 import Title from '../common/Title'
 import Button from '../common/Button'
 
+
 const About = () => {
     return (
-        <section className='w-full flex items-center justify-center'>
+        <section className='w-full h-[2000px] flex flex-col items-center justify-start'>
             <div className='flex items-center justify-center max-w-screen-lg'>
-                <div>
-                    <Image src="/about.webp" alt="About Image" height={ 560 } width={ 560 } className='rounded-2xl' />
+                <div
+                    data-aos="fade-right"
+                >
+                    <Image
+                        src="/about.webp"
+                        alt="About Image"
+                        height={ 560 }
+                        width={ 560 }
+                        className='rounded-2xl' />
                 </div>
-                <div className='ml-16 w-2/3'>
+                <div
+                    className='ml-16 w-2/3'
+                    data-aos="fade-left"
+                >
                     <Title>about me.</Title>
                     <h3
                         className='text-tertiary-dark dark:text-secondary-dark text-3xl font-medium mb-6'
