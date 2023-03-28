@@ -11,7 +11,7 @@ const Hero = () => {
                     <h6 className='text-tertiary-dark dark:text-secondary-dark text-2xl font-medium mb-5'>Hello, I am</h6>
                     <h1 className='text-primary text-6xl font-bold mb-5'>Đào Xuân Quý</h1>
                     <span className='text-tertiary-dark dark:text-secondary-dark text-xl font-medium mb-6 flex'>
-                        <p className='mr-1'>I Am Passionate</p> <ReactTypingEffect speed={ 100 } eraseSpeed={ 50 } eraseDelay={ 3000 } typingDelay={ 1000 } text={ ["Front End Web Developer", "Software Engineer", "Billiard"] } />
+                        <p className='mr-1'>I Am Passionate</p> <ReactTypingEffect speed={ 100 } eraseSpeed={ 50 } eraseDelay={ 3000 } typingDelay={ 1000 } text={ ["Front End Web Developer", "Software Engineer", "Billiard Player"] } />
                     </span>
                     <p className='text-tertiary dark:text-secondary text-lg mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deleniti labore consequuntur dolorem unde nemo enim pariatur placeat rem, tempora inventore.</p>
                     <Button>
