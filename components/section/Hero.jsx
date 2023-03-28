@@ -11,8 +11,8 @@ const Hero = () => {
                     <h1 className='text-primary text-6xl font-bold mb-5'>Đào Xuân Quý</h1>
                     <p className='text-tertiary-dark dark:text-secondary-dark text-xl font-medium mb-6 transition-all duration-300'>I Am Passionate ...</p>
                     <p className='text-tertiary dark:text-secondary text-lg mb-8 transition-all duration-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deleniti labore consequuntur dolorem unde nemo enim pariatur placeat rem, tempora inventore.</p>
-                    <Button href='https://drive.google.com/file/d/1bBnNy7w2ODbYM0ufuTT66MwikX6RFh0b/view' newTab>
-                        Download CV
+                    <Button>
+                        about me
                     </Button>
                 </div>
                 <div className='w-1/2'>

@@ -6,3 +6,4 @@ export {default as About} from './section/About';
 export {default as Works} from './section/Works';
 export {default as Contact} from './section/Contact';
 export {default as MetaMessenger} from './messenger/MetaMessenger';
+export {default as Title} from './common/Title';
