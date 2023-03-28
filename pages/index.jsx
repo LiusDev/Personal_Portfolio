@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <ThemeSwitcher />
       <SideBar />
-      <main className='bg-secondary dark:bg-tertiary transition-all duration-300 min-h-screen ml-64 overflow-hidden'>
+      <main className='bg-secondary dark:bg-tertiary min-h-screen ml-64 overflow-hidden'>
         <Hero />
         <About />
         <Works />

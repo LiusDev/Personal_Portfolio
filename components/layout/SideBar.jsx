@@ -48,14 +48,14 @@ const socialItems = [
 
 const SideBar = ({ className = "" }) => {
     return (
-        <aside className={ `w-64 fixed top-0 left-0 bottom-0 flex flex-col justify-between bg-secondary-dark dark:bg-tertiary-dark overflow-hidden transition-all duration-300 drop${className}` }>
-            <div className="relative after:content-[''] after:absolute after:-top-[180px] after:-left-[45px] after:w-[310px] after:h-[310px] after:bg-primary after:rounded-full after:transition-all after:duration-300">
+        <aside className={ `w-64 fixed top-0 left-0 bottom-0 flex flex-col justify-between bg-secondary-dark dark:bg-tertiary-dark overflow-hidden drop${className}` }>
+            <div className="relative after:content-[''] after:absolute after:-top-[180px] after:-left-[45px] after:w-[310px] after:h-[310px] after:bg-primary after:rounded-full">
                 <div>
                     <div className='relative mt-16 z-10 w-full flex flex-col justify-center items-center'>
                         <div className='w-100 h-100 overflow-hidden rounded-full border-secondary-dark border-4'>
                             <Image src="/avatar.webp" alt='Avatar' width={ 100 } height={ 100 } />
                         </div>
-                        <h5 className='mt-2 uppercase tracking-[3px] text-sm font-thin text-tertiary dark:text-secondary transition-all duration-300'>dao xuan quy</h5>
+                        <h5 className='mt-2 uppercase tracking-[3px] text-sm font-thin text-tertiary dark:text-secondary'>dao xuan quy</h5>
                     </div>
                 </div>
                 <div className='mt-20'>
@@ -83,7 +83,7 @@ const SideBar = ({ className = "" }) => {
                                 href={ item.href }
                                 className="inline-block px-3"
                             >
-                                <item.icon className='text-xl text-tertiary-dark dark:text-secondary-dark transition-all duration-300 group-hover:text-primary dark:group-hover:text-text-secondary-dark' />
+                                <item.icon className='text-xl text-tertiary-dark dark:text-secondary-dark group-hover:text-primary dark:group-hover:text-text-secondary-dark' />
                             </Button>
                         </li>
                     )) }

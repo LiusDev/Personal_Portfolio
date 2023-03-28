@@ -13,7 +13,7 @@ const About = () => {
                 <div className='ml-16 w-2/3'>
                     <Title>about me.</Title>
                     <h3
-                        className='text-tertiary-dark dark:text-secondary-dark text-3xl font-medium mb-6 transition-all duration-300'
+                        className='text-tertiary-dark dark:text-secondary-dark text-3xl font-medium mb-6'
                     >
                         I am a FrontEnd developer with over than 2 year of experience.
                     </h3>

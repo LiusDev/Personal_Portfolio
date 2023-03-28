@@ -28,6 +28,10 @@
     background-color: var(--main-color);
 }
 
+*, ::after, ::before {
+    transition: all 0.2s linear;
+}
+
 html, body {
     font-family: 'Rubik', sans-serif;
     overflow: overlay;
