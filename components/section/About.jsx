@@ -4,9 +4,9 @@ import Title from '../common/Title'
 import Button from '../common/Button'
 
 
-const About = () => {
+const About = ({ id, className }) => {
     return (
-        <section className='w-full h-[2000px] flex flex-col items-center justify-start'>
+        <section id={ id } className={ `w-full h-[2000px] flex flex-col items-center justify-start ${className}` }>
             <div className='flex items-center justify-center max-w-screen-lg'>
                 <div
                     data-aos="fade-right"
@@ -24,12 +24,12 @@ const About = () => {
                 >
                     <Title>about me.</Title>
                     <h3
-                        className='text-tertiary-dark dark:text-secondary-dark text-3xl font-medium mb-6'
+                        className='text-tertiary-dark dark:text-secondary-dark text-3xl font-medium mb-6 transition-all duration-300'
                     >
-                        I am a FrontEnd developer with over than 2 year of experience.
+                        { `I am a FrontEnd developer with more than ${new Date().getFullYear() - 2022} year of experience.` }
                     </h3>
-                    <p className='text-tertiary-dark/70 dark:text-secondary-dark/70 leading-7'>
-                        I am a FrontEnd developer with over than 2 year of experience, but the products I have made are carefully invested. I am also an active person at work, constantly learning new skills.
+                    <p className='text-tertiary-dark/70 dark:text-secondary-dark/70 leading-7 transition-all duration-300'>
+                        { `I am a FrontEnd developer with more than ${new Date().getFullYear() - 2022} year of experience, but the products I have made are carefully invested. I am also an active person at work, constantly learning new skills.` }
                     </p>
                     <div className='mt-10'>
                         <Button

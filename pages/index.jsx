@@ -24,11 +24,11 @@ export default function Home() {
       </Head>
       <ThemeSwitcher />
       <SideBar />
-      <main className='bg-secondary dark:bg-tertiary min-h-screen ml-64 overflow-hidden'>
-        <Hero />
-        <About />
-        <Works />
-        <Contact />
+      <main className='bg-secondary dark:bg-tertiary min-h-screen ml-64 overflow-hidden transition-all duration-300'>
+        <Hero id="hero" />
+        <About id="about" />
+        <Works id="works" />
+        <Contact id="contact" />
       </main>
       <MetaMessenger />
     </>
