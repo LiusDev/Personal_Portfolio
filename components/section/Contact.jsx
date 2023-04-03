@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({ id, className }) => {
     return (
-        <div>Contact</div>
+        <section id={ id } className={ `min-h-screen ${className}` }>Contact</section>
     )
 }
 

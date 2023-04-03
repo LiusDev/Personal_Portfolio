@@ -53,7 +53,7 @@ const socialItems = [
     }
 ]
 
-const SideBar = ({ className = "" }) => {
+const SideBar = ({ className }) => {
     const [activeSection, setActiveSection] = useState('hero');
     const handleSetActive = href => setActiveSection(href);
 

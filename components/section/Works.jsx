@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Works = () => {
+const Works = ({ id, className }) => {
     return (
-        <div>Works</div>
+        <section id={ id } className={ `min-h-screen ${className}` }>Works</section>
     )
 }
 
