@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import Button from '../common/Button'
 import ReactTypingEffect from 'react-typing-effect';
+import { Button } from '..';
 
 const info = {
     name: 'Đào Xuân Quý',
@@ -25,7 +25,13 @@ const Hero = ({ id, className }) => {
                         <p className='mr-1'>I Am Passionate</p> <ReactTypingEffect speed={ 100 } eraseSpeed={ 50 } eraseDelay={ 3000 } typingDelay={ 1000 } text={ info.job } />
                     </span>
                     <p className='text-tertiary dark:text-secondary text-lg mb-8 transition-all duration-300'>{ info.description }</p>
-                    <Button>
+                    <Button
+                        to="about"
+                        spy={ true }
+                        smooth={ true }
+                        offset={ -100 }
+                        duration={ 500 }
+                    >
                         about me
                     </Button>
                 </div>

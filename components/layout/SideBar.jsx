@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import * as Scroll from 'react-scroll';
-import { Link, Button as Btn, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { TfiHome, TfiIdBadge, TfiBookmarkAlt, TfiEmail } from "react-icons/tfi";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import Button from '../common/Button'
+import { Button } from '..'
 
 const info = {
     name: 'dao xuan quy',
@@ -70,17 +68,18 @@ const SideBar = ({ className }) => {
                     <ul className='flex flex-col justify-center'>
                         { menuItems.map((item, index) => (
                             <li key={ index } className={ `w-full ${index !== 0 ? "border-t border-tertiary-dark/5 dark:border-secondary-dark/5" : ""}` }>
-                                <Link
+                                <Button
                                     to={ item.href }
                                     spy={ true }
                                     smooth={ true }
                                     offset={ -100 }
                                     duration={ 500 }
                                     onSetActive={ () => handleSetActive(item.href) }
+                                    buttonType="none"
                                     className={ `w-full flex px-8 py-5 cursor-pointer transition-all duration-300 ${activeSection === item.href ? "font-semibold text-primary" : "text-tertiary-dark/60 dark:text-secondary-dark/60 hover:dark:text-secondary-dark text-tertiary dark:text-secondary hover:text-primary dark:hover:text-text-secondary-dark font-normal"}` }
                                 >
                                     <item.icon className='text-[18px]' /> <span className='ml-3 text-sm uppercase tracking-[3px]'>{ item.name }</span>
-                                </Link>
+                                </Button>
                             </li>
                         )) }
                     </ul>
@@ -96,7 +95,7 @@ const SideBar = ({ className }) => {
                                 href={ item.href }
                                 className="inline-block px-3"
                             >
-                                <item.icon className='text-xl text-tertiary-dark dark:text-secondary-dark group-hover:text-primary dark:group-hover:text-text-secondary-dark' />
+                                <item.icon className='text-xl text-tertiary-dark dark:text-secondary-dark group-hover:text-primary dark:group-hover:text-text-secondary-dark transition-all duration-300' />
                             </Button>
                         </li>
                     )) }

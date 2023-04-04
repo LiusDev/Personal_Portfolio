@@ -1,34 +1,41 @@
 import React from 'react'
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll'
 
-const Button = ({ onclick, href = "/", newTab, buttonType, className, children }) => {
+const Button = ({ href = "/", newTab, buttonType, className, children, ...props }) => {
     let BtnType = Link;
-    const props = {
+    const addProps = {
+        ...props,
         href: href,
         target: newTab ? "_blank" : "_self",
         rel: newTab ? "noopener noreferrer" : "",
     };
-    if (onclick) {
+    if (addProps.onClick) {
         BtnType = "button";
-        props.onClick = onclick;
+    }
+    if (addProps.to) {
+        BtnType = ScrollLink;
     }
     switch (buttonType) {
         case "normal":
-            props.className = `px-6 py-3 bg-primary tracking-[2px] text-sm text-secondary-dark shadow-button dark:shadow-button-dark cursor-pointer hover:bg-tertiary-dark dark:hover:text-primary dark:hover:bg-secondary-dark hover:shadow-button-hover dark:hover:shadow-button-hover capitalize transition-all duration-300 ${className}`;
+            addProps.className = `px-6 py-3 bg-primary tracking-[2px] text-sm text-secondary-dark shadow-button dark:shadow-button-dark cursor-pointer hover:bg-tertiary-dark dark:hover:text-primary dark:hover:bg-secondary-dark hover:shadow-button-hover dark:hover:shadow-button-hover capitalize transition-all duration-300 ${className}`;
             break;
         case "text":
-            props.className = `text-tertiary dark:text-secondary hover:text-primary dark:hover:text-text-secondary-dark transition-all duration-300 ${className}`;
+            addProps.className = `text-tertiary dark:text-secondary hover:text-primary dark:hover:text-text-secondary-dark transition-all duration-300 ${className}`;
             break;
         case "icon":
-            props.className = `group transition-all duration-300 ${className}`;
+            addProps.className = `group transition-all duration-300 ${className}`;
+            break;
+        case "none":
+            addProps.className = `${className}`;
             break;
         default:
-            props.className = `px-6 py-3 bg-primary tracking-[2px] text-sm text-secondary-dark shadow-button dark:shadow-button-dark cursor-pointer hover:bg-tertiary-dark dark:hover:text-primary dark:hover:bg-secondary-dark hover:shadow-button-hover dark:hover:shadow-button-hover capitalize transition-all duration-300 ${className}`;
+            addProps.className = `px-6 py-3 bg-primary tracking-[2px] text-sm text-secondary-dark shadow-button dark:shadow-button-dark cursor-pointer hover:bg-tertiary-dark dark:hover:text-primary dark:hover:bg-secondary-dark hover:shadow-button-hover dark:hover:shadow-button-hover capitalize transition-all duration-300 ${className}`;
             break;
     }
     return (
         <BtnType
-            { ...props }
+            { ...addProps }
         >
             { children }
         </BtnType>
