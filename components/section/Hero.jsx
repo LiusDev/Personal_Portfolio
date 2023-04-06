@@ -16,7 +16,7 @@ const info = {
 
 const Hero = ({ id, className }) => {
     return (
-        <section id={ id } className={ `relative w-full min-h-screen flex items-center justify-center px-4 after:z-0 after:content-[''] after:bg-secondary-dark dark:after:bg-tertiary-dark after:absolute after:-right-[20vh] after:-top-[20vh] after:w-[100vh] after:h-screen after:rounded-full after:transition-all after:duration-300 ${className}` }>
+        <section id={ id } className={ `relative w-full min-h-screen flex items-center justify-center px-6 md:px-8 after:z-0 after:content-[''] after:bg-secondary-dark dark:after:bg-tertiary-dark after:absolute after:-right-[20vh] after:-top-[20vh] after:w-[100vh] after:h-screen after:rounded-full after:transition-all after:duration-300 ${className}` }>
             <div className='flex flex-col md:flex-row items-center justify-center max-w-screen-lg z-10'>
                 <div className='md:w-1/2 md:mr-5 order-2 md:order-1 text-center md:text-left'>
                     <h6 className='text-tertiary-dark dark:text-secondary-dark text-md lg:text-2xl font-medium mb-2 md:mb-5 transition-all duration-300'>Hello, I am</h6>
