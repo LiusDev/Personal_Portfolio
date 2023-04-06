@@ -16,15 +16,15 @@ const info = {
 
 const Hero = ({ id, className }) => {
     return (
-        <section id={ id } className={ `relative w-full min-h-screen flex items-center justify-center after:z-0 after:content-[''] after:bg-secondary-dark dark:after:bg-tertiary-dark after:absolute after:-right-[20vh] after:-top-[20vh] after:w-[100vh] after:h-screen after:rounded-full after:transition-all after:duration-300 ${className}` }>
-            <div className='flex items-center justify-center max-w-screen-lg z-10'>
-                <div className='w-1/2'>
-                    <h6 className='text-tertiary-dark dark:text-secondary-dark text-2xl font-medium mb-5 transition-all duration-300'>Hello, I am</h6>
-                    <h1 className='text-primary text-6xl font-bold mb-5 transition-all duration-300'>{ info.name }</h1>
-                    <span className='text-tertiary-dark dark:text-secondary-dark text-xl font-medium mb-6 flex transition-all duration-300'>
-                        <p className='mr-1'>I Am Passionate</p> <ReactTypingEffect speed={ 100 } eraseSpeed={ 50 } eraseDelay={ 3000 } typingDelay={ 1000 } text={ info.job } />
+        <section id={ id } className={ `relative w-full min-h-screen flex items-center justify-center px-4 after:z-0 after:content-[''] after:bg-secondary-dark dark:after:bg-tertiary-dark after:absolute after:-right-[20vh] after:-top-[20vh] after:w-[100vh] after:h-screen after:rounded-full after:transition-all after:duration-300 ${className}` }>
+            <div className='flex flex-col md:flex-row items-center justify-center max-w-screen-lg z-10'>
+                <div className='md:w-1/2 md:mr-5 order-2 md:order-1 text-center md:text-left'>
+                    <h6 className='text-tertiary-dark dark:text-secondary-dark text-md lg:text-2xl font-medium mb-2 md:mb-5 transition-all duration-300'>Hello, I am</h6>
+                    <h1 className='text-primary text-4xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-5 transition-all duration-300'>{ info.name }</h1>
+                    <span className='text-tertiary-dark dark:text-secondary-dark text-md lg:text-xl font-medium mb-3 md:mb-5 flex transition-all duration-300'>
+                        <ReactTypingEffect staticText="I Am Passionate" speed={ 100 } eraseSpeed={ 50 } eraseDelay={ 3000 } typingDelay={ 1000 } text={ info.job } className='m-auto md:m-0' />
                     </span>
-                    <p className='text-tertiary dark:text-secondary text-lg mb-8 transition-all duration-300'>{ info.description }</p>
+                    <p className='text-tertiary dark:text-secondary text-sm lg:text-lg mb-8 transition-all duration-300'>{ info.description }</p>
                     <Button
                         to="about"
                         spy={ true }
@@ -35,7 +35,7 @@ const Hero = ({ id, className }) => {
                         about me
                     </Button>
                 </div>
-                <div className='w-1/2'>
+                <div className='w-60 md:w-1/2 order-1 md:order-2 mb-12 md:mb-0'>
                     <div className='bg-primary rounded-full overflow-hidden border-8 border-secondary-dark'>
                         <Image src={ info.avatar } alt='Avatar' width={ 540 } height={ 540 } className='scale-105 align-top drop-shadow-xl' />
                     </div>

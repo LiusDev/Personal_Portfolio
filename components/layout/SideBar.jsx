@@ -34,18 +34,22 @@ const menuItems = [
 
 const socialItems = [
     {
+        name: 'Facebook',
         icon: FaFacebook,
         href: 'https://www.facebook.com/x.quy.203'
     },
     {
+        name: 'Instagram',
         icon: FaInstagram,
         href: 'https://www.instagram.com/x.quy.203'
     },
     {
+        name: 'Linkedin',
         icon: FaLinkedin,
         href: 'https://www.linkedin.com/in/xquy203/'
     },
     {
+        name: 'Github',
         icon: FaGithub,
         href: 'https://github.com/LiusDev'
     }
@@ -56,7 +60,7 @@ const SideBar = ({ className }) => {
     const handleSetActive = href => setActiveSection(href);
 
     return (
-        <aside className={ `w-64 fixed top-0 left-0 bottom-0 flex flex-col justify-between bg-secondary-dark dark:bg-tertiary-dark overflow-hidden shadow-xl dark:shadow-none transition-all duration-300 ${className}` }>
+        <aside className={ `w-64 fixed top-0 left-0 bottom-0 hidden xl:flex flex-col justify-between bg-secondary-dark dark:bg-tertiary-dark overflow-hidden shadow-xl dark:shadow-none transition-all duration-300 ${className}` }>
             <div className="relative after:content-[''] after:absolute after:-top-[180px] after:-left-[45px] after:w-[310px] after:h-[310px] after:bg-primary after:rounded-full after:shadow-lg dark:after:shadow-none">
                 <div className='relative mt-16 z-10 w-full flex flex-col justify-center items-center'>
                     <div className='w-100 h-100 overflow-hidden rounded-full border-secondary-dark border-4'>
@@ -90,6 +94,7 @@ const SideBar = ({ className }) => {
                     { socialItems.map((item, index) => (
                         <li key={ index }>
                             <Button
+                                title={ item.name }
                                 buttonType="icon"
                                 newTab
                                 href={ item.href }

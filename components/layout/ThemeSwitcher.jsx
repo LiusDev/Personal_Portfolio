@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { TiWeatherSunny, TiWeatherNight } from 'react-icons/ti'
-import Button from '../common/Button'
+import { Button } from '..'
 
 const ThemeSwitcher = () => {
     const [lightMode, setLightMode] = useState(true);
@@ -26,7 +26,7 @@ const ThemeSwitcher = () => {
     return (
         <Button
             buttonType='icon'
-            onclick={ handleThemeChange }
+            onClick={ handleThemeChange }
             className='fixed z-50 top-5 right-5 py-2 px-2 flex dark:bg-secondary-dark bg-tertiary-dark rounded-full transition-all duration-300'
         >
             <Icon className='dark:text-tertiary-dark text-secondary-dark text-4xl' />
